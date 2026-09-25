@@ -1,6 +1,3 @@
-from result_calculator import calculate_percentage,calculate_grade
-
-
 def input_student():
     student_name = input('enter name of student:')
     marks_python = float(input('enter marks of python:'))
@@ -14,11 +11,12 @@ def input_student():
     }
     return dict_student_info
 
-# TODO:
 
-
-
-
+def calculate_percentage(marks_python, marks_comm, marks_math):
+    total = marks_python + marks_comm + marks_math
+    percentage = (total / 300) * 100
+    return percentage
+def calculate grade_percentage
 
 
 if __name__ == "__main__":
@@ -27,12 +25,8 @@ if __name__ == "__main__":
     print(student_info)
     print("student:", student_info["name"])
     percentage = calculate_percentage(
-        student_info["python_marks"],
-        student_info["comm_marks"],
-        student_info["math-marks"])
-    print("Percentage",calculate_percentage(
-        student_info["python_marks"],
-        student_info["comm_marks"],
-        student_info["math_marks"]))
-    print(f"Grade: {calculate_grade(percentage=percentage)}")
-
+        student_info["marks_python"],
+        student_info["marks_comm"],
+        student_info["marks_math"]
+    )
+    print("percentage:", percentage)
